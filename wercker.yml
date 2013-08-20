@@ -1,9 +1,9 @@
 box: wouter/ubuntu12.04-saltstack
 build:
   steps:
-    - script :
-        name : install and check nano
-        code : |
+    - script:
+        name: install and check nano
+        code: |
           sudo salt-call --local pkg. install nano refresh=true
           sudo salt-call --local pkg.file_list nano
           type nano || { echo "nano not found"; exit 1; } 
